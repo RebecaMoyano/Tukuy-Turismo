@@ -1,0 +1,730 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+figure:hover .localidad{ /*cuando se pasa el mouse por encima de c/img del catalogo*/
+    display: none;
+}
+.color-fondo{
+    background-color: beige;
+}
+.localidad{
+    color: white;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+}
+.exito{
+    color: green;
+}
+.error{
+    color: red;
+}
+.dropdown-item {
+    display: block;
+    padding: 8px 12px;
+    color: black;
+    text-decoration: none;
+}
+.dropdown-item:hover {
+    background-color: #f0f0f0;
+}
+.navbar{
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index:1000;
+    background-color: #3F6232 !important;
+}
+.nav-link{
+    position: relative;
+}
+.nav-item a{
+    color: white;
+}
+.nav-item a:hover{
+    color: white;
+}
+body{
+    background-color: #D3E3D0;
+}
+.btn-saber-mas{
+    background-color: #0060C1;
+    color: white;
+}
+.btn-saber-mas:hover{
+    background-color: #0052A5;
+    color: white;
+}
+.btn-early-booking{
+    border: 1px solid grey;
+    padding:10px;
+    text-decoration: none;
+    background-color: #3F6232;
+    color: white;
+    border-radius:10px;
+}
+.price-value{
+    margin-bottom: 20px;
+}
+.nav-link::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: .3s;
+}
+.nav-link:hover::before{
+    width: 100%;
+}
+/*estilos de los tours relacionados*/
+.carousel-inner{
+    background-color: #1D6EAB;
+    border-radius:0;
+}
+.carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    padding: 15px; 
+}
+.carousel-container h2, p{
+    text-align: center;
+}
+.content span{
+    color: #0060C1;
+    text-shadow: 3px 4px 4px rgba(0, 0, 0, 1);
+}
+.btn-reservation{
+    z-index: 90; /*superposicion menor con relacion al navegador*/
+}
+.btn-reservation{
+    margin-top:10px;
+    padding: 14px 30px;
+    font-size: 1.1em;
+    border-radius: 10px;
+    transition: .6 ease-in;
+    background-color: #0060C1;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    z-index:1;
+    text-decoration: none;
+}
+.cont-offer{
+    background-color: #2B4423;
+}
+.cont-offer .row div{
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 300px;
+    margin-left: 20px;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    background-color: #3D6031;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    margin-bottom: 30px;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
+}
+.cont-offer .row div:hover{
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+    transform: translateY(-5px);
+}
+.cont-offer .row div .title, .subtitle{
+    color: white;
+    text-align: center;
+}
+.subtitle{
+    font-weight: 400;
+    font-size: 18px;
+}
+.cont-offer .row div .title{
+    margin-top: 30px;
+}
+.cont-offer div i{
+    position: absolute;
+    font-size: 34px;
+    color:#2D7121;
+    margin-bottom: 210px;
+    background-color: #C5E2C0;
+    border-radius: 100%;
+    padding: 10px;
+}
+.cont-offer-text{
+    text-align: center;
+    color: white;
+}
+.cont-offer-text h2{
+    padding-top: 30px;
+}
+.cont-offer-text div{
+    display: flex;
+    justify-content: center;
+}
+.cont-offer-descrip{
+    width: 60%;
+    text-align: center;
+    margin: 15px 0 35px 0;
+    font-size: 18px;
+    font-weight: 400;
+}
+.row .title{
+    font-weight: 700;
+    font-size: 20px;
+}
+.cont-mission{
+    margin-top: 4.5em;
+    margin-bottom: 60px;
+}
+.cont-mission img{
+    width: 90%;
+    height: 22em;
+}
+.cont-mission p{
+    max-width: 100%;
+    word-break: break-all;
+    text-align: justify;
+}
+.cont-m-text{ /*animacion para que aparezca por la izquierda*/
+    transform: translateX(100px);
+    opacity: 0;
+    animation: fadeInRight 0.5s ease-out forwards;
+}
+.cont-m-img{
+    transform: translateX(-100px);
+    opacity: 0;
+    animation: fadeInLeft 0.5s ease-out forwards; /*para que aparezca por la derecha*/
+}
+.caracteristics{
+    background-color: #00484B;
+    padding: 30px;
+}
+.caracteristics .title{
+    color: white;
+    font-weight: 700;
+}
+.our-tours img{
+    width: 270px;
+    height: 230px;
+    opacity: .8;
+    margin: 4px;
+    border-radius: 10px 10px 0 0;
+} 
+.our-tours .cartillas-tours{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cartilla{
+    padding: 5px;
+    border: 1px solid grey;
+}
+.cartilla p{
+    line-height: 0; /*para que le texto de la cartilla no tenga la separación predeterminada de la etiqueta <p>*/
+    padding: 2px;
+    margin-top: 15px;
+}
+#btnCuenta, #btnSesion{
+    padding: 10px;
+    background-color: #2B4423;
+    color: white;
+    margin-right: 5px;
+    border-radius: 10px 10px 0 0;
+    border: 1px solid #006FDF;
+}
+#btnCuenta:hover, #btnSesion:hover{
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+/*estilos catalog*/
+.grid-images h2{
+    margin-top: 50px;
+    margin-bottom: 35px;
+    text-align: center;
+}
+.grid-images span{
+    color: #0052A5; 
+    font-weight: bold;
+}
+.cont-text p{
+    text-align:center; 
+    width:80%; 
+    color:black; 
+    font-weight:400; 
+    font-size:18px;
+}
+.sobre-capa p{
+    font-size:30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .7);
+}
+.contenedor figure{
+    position: relative;
+    height: 250px;
+    width: 350px;
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow: 0px 15px 25px rgba(0,0,0,0.5);
+    cursor: pointer;
+    margin-left: 10px;
+}
+.contenedor figure .sobre-capa{
+    position:absolute;
+    left:0;
+    top:0;
+    background-color: rgba(0,0,0,0.3);
+    width: 100%;
+    height: 100%;
+}
+.contenedor figure img{
+    width: 100%;
+    height: 100%;
+    transition: all 500ms ease-out; /*para animaciones suaves*/
+}
+.contenedor figure .capa{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(22, 104, 120, 0.749);
+    transition: all 500ms ease-out;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+}
+.contenedor figure:hover > .capa{
+    /*para que la capa sea totalmente visible y dinamica*/
+    opacity: 1;
+    visibility: visible;
+}
+.contenedor figure:hover > .capa h3{
+    margin-top: 70px;
+    margin-bottom:15px;
+}
+.contenedor figure .capa h3{
+    font-weight: 600;
+    margin-bottom: 120px;
+    transition: all 500ms ease-out; /*para que el texto aparezca suavemente*/
+    margin-top: 30px;
+    color: #fff;
+}
+.another-tours{
+    padding-top: 40px;
+    text-align: center;
+}
+.contenedor figure .capa a{
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+.capa a{
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 400;
+    color:white;
+    text-decoration: underline;
+    transition: all 500ms ease-out;
+}
+.icons{
+    margin: 0;
+    padding: 0;
+}
+.icons i{
+    color: #FFD43B;
+}
+/*estilos del footer*/
+    .footer{
+        padding:0;
+        padding-bottom:0;
+        height: 2em;
+    }
+    .container-footer{
+        width: 100%;
+    }
+    .footer .image{
+        background-color:#3F6232;
+        width: 100%;
+        height: 100%;
+        opacity: .85;
+        position:relative;
+        z-index:1;
+        color: white;
+    }
+    .footer .column{
+        width: 33%;
+        position: relative;
+        z-index:100;
+        border-right: 1px solid #fff;
+    }
+
+    .footer .column i{
+        font-size:2em;
+    }
+    .social-icons{
+        justify-content:center;
+        align-items:center;
+    }
+#img-logo{
+    width: 100px;
+    height: 40px;
+    margin-left: 10px;
+}
+#img-portada{
+    height: auto;
+    width: 100%;
+}
+.contenedor-forgot{
+    padding:0;
+    margin: 0;
+    margin-top:0;
+}
+.forgot-pass .bloque-img, .bloque-form{
+    height: 90vh;
+} 
+.cont-pueblo{
+    min-height:800px;
+}
+.card{
+    width: 100%;
+    max-width:300px;
+    margin: 0 auto;
+    border: none; 
+    border-radius: 10px; 
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card-img-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 200px;
+    object-fit: cover;
+}
+.card-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    flex-grow: 1; 
+}
+.card-title {
+    font-size: 1.35rem; 
+    color: #333; 
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.card-text {
+    font-size: 0.95rem; 
+    color: #666; 
+    margin-bottom: 15px;
+    flex-grow: 1; 
+}  
+.header-individual {
+    height: 60vh;
+    position: relative; 
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.header-individual h2 {
+    font-size: 5em;
+    font-weight:600;
+    font-family:'Tinos';
+    color: white;
+    z-index: 1;
+    text-shadow: 3px 4px 2px rgba(0, 0, 0, 0.7);
+}
+
+.header-individual::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6));
+    z-index:0;
+}
+.row-resumen{
+    width: 90%;
+    height: 100%;
+}
+.row-resumen .bloque img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.container .row .col{
+    padding: 0;
+    margin: 0;
+}
+.container .row .col-md-6.bloque ul {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+    list-style-type: none; 
+}
+.container .row .col-md-6.bloque ul li {
+    width: 100%; 
+    margin-bottom: 5px; 
+}
+.container .row .col-md-6.bloque ul li h3,
+.container .row .col-md-6.bloque ul li p,
+.container .row .col-md-6.bloque ul li i {
+    text-align: center;
+    width: 100%; 
+}
+.container .list-unstyled i{
+    color: #27aa78;
+}
+/*CARDS INDIVIDUALES DE LOS TOURS*/
+.gallery-item{
+    width: 40%;
+}
+.row .g-0{
+    padding-top: 30px;
+}
+.gallery-card{
+    width: 100%;
+}
+.gallery-card img{
+    width: 100%;
+    height: 280px;
+}
+.gallery-card img{
+    opacity: .9;
+}
+.promo-early-booking{
+    margin-left: 15px;
+}
+.content-early-booking i{
+    font-size: 30px;
+    margin-top: 10px 0 10px 0;
+}
+#info-resumen{
+    text-align: center;
+}
+#info-resumen #text{
+    width: 80%;
+    text-align: center;
+    justify-content: center;
+}
+#consejos-panel, .consejos-seccion{
+    width: 100%;
+}
+#info-resumen div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#resumen-panel{
+    margin-top: 4em;
+}
+/*estilos pagina individual tour*/
+#detalles-panel{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
+}
+.detalles-tour-section{
+    background-color: #576C46;
+}
+.incluye{
+    margin-top: 4em;
+    margin-bottom: 4em;
+}
+.incluye li{
+    font-size: 17px;
+    margin-top: 10px;
+}
+.section-subtitle, .section-title, .section-description, .section-secondary-text{
+    color: white;
+}
+.tab-content{
+    margin-top: 4em;
+}
+.promocion-destacada{
+    margin-top: 1.2em;
+}
+.sublist li{
+    margin-left: 40px;
+    margin-top: 10px;
+}
+.image-container img{
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease-in-out;
+}
+.image-container img:hover{
+    transform: scale(1.05);
+}
+.icons-tour-includes div{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+}
+.icons-tour-includes .title{
+    font-size: 15px;
+    font-weight: 600;
+}
+/*grid-images-fauna*/
+.grid-imagenes-fauna{
+    padding:4em;
+    margin-top: 30px;
+}
+.grid-imagenes-fauna .row .col-12{
+    padding: 0;
+}
+.grid-imagenes-fauna .row img{
+    height: 300px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.botones-aumento-personas span{
+    font-size: 30px;
+    padding: 20px;
+}
+/*bout us estilos*/
+.contenedor-about{
+    height: 45vh;
+    background-image:url('../assets/img/header-flor.webp');
+    background-size: cover;
+    background-position:center 20% auto;
+    opacity:.9;
+    background-repeat:no-repeat;
+}
+.contenedor-about div{
+    height:100%;
+    width: 100%;
+}
+.contenedor-about h2{
+    z-index:100;
+    color:white;
+    font-size:50px;
+    font-weight: bold;
+    letter-spacing:2px;
+}
+.contenedor-vision{
+    margin-top: 20px; 
+    margin-bottom: 40px;
+}
+.contenedor-vision .row .mt-4 h2{
+    color:green;
+    text-align: left; 
+    margin-left:30px;
+    letter-spacing:2px;
+}
+.contenedor-vision .row .mt-4 span{
+    color: #006FDF;
+}
+.contenedor-vision .row .mt-4 p{
+    color:black; 
+    font-weight: 400; 
+    font-size: 19px; 
+    line-height: 1.6; 
+    letter-spacing: 0.3px; 
+    text-align: left;
+    margin-left:30px;
+}
+.contenedor-practicas{
+    margin-top: 50px; 
+    margin-bottom: 40px;
+}
+.contenedor-practicas h2{
+    color:#006FDF; 
+    text-align: left;
+    margin-left:30px;
+    font-family: 'Bebas Neue'; 
+    letter-spacing:2px;
+}
+.contenedor-practicas .row p{
+    color:black; 
+    font-weight: 400; 
+    font-size: 19px; 
+    line-height: 1.6; 
+    letter-spacing: 0.3px; 
+    text-align: left;
+    margin-left:30px;
+}
+.contenedor-practicas img{
+    max-width: 350px; 
+    height: auto;
+    margin-bottom: 20px;
+}
+/*media query para dispositivos moviles*/
+@media (max-width:576px){
+    header{
+        height: 70vh;
+    }
+    .cta{
+        text-align: center;
+        font-size: 20px;
+    }
+    .cont-offer-descrip{
+        width: 90%;
+    }
+    .gallery-item{
+        width: 100%;
+    }
+    #detalles-panel{
+        width: 100%;
+    }
+    .cont-pueblo{
+        min-height:auto;
+    }
+    .another-tours{
+        visibility:none;
+        display:none;
+    }
+    .form-reserva{
+        max-width: 500px;
+    }
+    .carousel-container{
+        height: 100vh;
+    }
+    .carousel-slide {
+        min-width: 250px;
+    }
+    .carousel-slide.active {
+        transform: scale(1.05); /* Slightly smaller active scale on smaller screens */
+    }
+    .col-md-7, .col-md-5{
+        width: 100%;
+    }
+    .row{
+        width: 100%;
+    }
+    .resumen-reserva-container{
+        max-width: 100%;
+    }
+}
+/*media query para tabletas*/
+@media(min-height: 577px) and (max-width: 992px){
+    header{
+        height: 100vh;
+    }
+    .cont-offer-descrip{
+        width: 90%;
+    }
+}
