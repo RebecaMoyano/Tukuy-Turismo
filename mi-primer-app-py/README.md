@@ -10,3 +10,4 @@
 ### Cómo ejecutarlo:
 1. Tener Python instalado.
 2. Correr `python app.py` en la terminal. 
+=======
